@@ -1,0 +1,43 @@
+# PYTHON_PACKAGES :
+
+* Captcha - CAPTCHA stands for Completely Automated Public Turing test to tell Computers and Humans Apart. The primary purpose of captcha is to authenticate and give entry to websites only or human beings and block bots.
+
+      pip install captcha
+
+     from captcha.image import
+     ImageCaptcha
+
+     image =
+     ImageCaptcha(width=200, height=90)
+     data = imag.generate('MEDIUM')
+     image.write('MEDIUM' , 'out.png')
+
+.
+.
+.
+
+* Pretty Table - The prettytable library is used to represent data in a relational table. With prettytable other operations on the tabular data can be performed like adding or deleting a row, alignment of columns, and clearing all the data in the table.
+
+    python -m pip install -U prettytable
+
+from prettytable import
+PrettyTable
+table = PrettyTable()
+
+table.field_names =
+['Month', 'Earnings']
+table.add_rows(
+  [
+  ['January', 1020]
+  ['Fabruary', 1233]
+  ['March', 1992]
+  [April], 1500
+  ]
+)
+
+print(table)
+
+.
+.
+.
+
