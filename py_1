@@ -1,0 +1,15 @@
+#Start . . . .
+
+logo = 'by: kalistamp'
+print(logo.title())
+print('\n'*2)
+#
+#
+#
+
+
+
+* started (project 19) Digital Clock python script 
+
+* Coursea (1hr.)
+
