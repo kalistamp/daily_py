@@ -1,0 +1,36 @@
+* NEXT PROJECT :
+
+      Simple Interest Script
+      
+
+* read python practice book -
+
+https://anandology.com/python-practice-book/index.html
+
+
+
+
+.
+.
+
+*NOTES :
+
+#
+#
+#
+
+Answer = input(‘Hey Wassup Enter a string: ‘)
+
+print(Answer)
+
+      Enter a string: {“user reply goes here”}
+      
+#
+#[ Vs. ]
+#
+
+print(‘Hey Wassup Enter a string: ‘)
+Answer = input()
+
+      Hey Wassup Enter a string:
+      {“user reply goes here”}
