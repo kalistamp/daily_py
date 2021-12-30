@@ -1,0 +1,38 @@
+* Read : Automate the boring stuff ; py book
+
+
+MANIPULATING STRINGS 
+
+* Escape Characters 
+
+Escape character	Prints as
+\'	Single quote
+\"	Double quote
+\t	Tab
+\n	Newline (line break)
+\\	Backslash
+
+
+Escape characters lets you use characters that would otherwise not be allowed to be used in a string ..
+
+An escape character consists of a backslash (\) followed by the character you want to add to the string. 
+
+    L = 'by: kalistamp\’s mother'
+
+    print(L.title())
+
+    #
+    #End
+
+
+By using the escape character at the end of kalistamp we were able to add the apostrophe “s” to the end of it ...
+
+* Raw Strings
+
+You can put and “r” before the beginning of the quotation to make it a raw string (Similar to using “f” before to format the string)
+
+This can be useful for something like printing a filepath  ...
+
+Raw strings are helpful if you are typing string values that contain many backslashes, such as the strings used for Windows file paths like r'C:\Users\Al\Desktop' or regular expressions
+
+
