@@ -1,0 +1,28 @@
+
+# Built in Functions you can use on Lists
+
+.
+.
+
+* insert function : adding an element to an existing List 
+
+# insert function used on a list
+
+colors = ['red', 'blue', 'green', 'yellow']
+
+colors.insert(2,'purple_addition_color)')
+
+print(colors)
+
+
+* reverse function: Changes the order of the list to reverse 
+
+# insert function used on a list
+
+colors = ['red', 'blue', 'green', 'yellow']
+
+colors.reverse()
+
+print(colors)
+
+* sort function: You can use the sort Function to arrange the list in ascending order according to the alphabet 
