@@ -1,1 +1,29 @@
 
+
+DAVID_BOMBAL - HOW TCP REALLY WORKS 
+
+https://www.youtube.com/watch?v=rmFX1V49K8U
+
+NOTES :
+
+ISN == Initial Sequence Number 
+( Displayed under Transmission Control Protocol )
+
+ISN is the initial sequence number sent out when performing a SYN,ACK Handshake , underneath that you will see the Acknowledge number 
+
+* THREE WAY HANDSHAKE - (w/ "tcp") 
+
+Transmission Control Protocol [layer 4 on middle Panel]
+
+Source Port: 8978 (Source port or "client port" is usually a high number, changes depending on what OS the system is using)
+Desination Port: 80 (Client is sitting on the source port and the server is on Destination port)
+[stream index: 0] ( stream index == the 4 tuple for this conversation, a 4 tuple is,  2 IPs and 2 Port numbers (source port & destination port))-(The stream index gives a unique TCP Conversation)
+
+As you go down the wireshark list of packets you will see after each conversation the stream index goes up by 1 , so the stream indexhelps identify which conversation the packet is from 
+
+
+SYN- SYN/ACK - ACK
+
+SYN HANDSHAKE EXPLANATION ==
+ 
+
