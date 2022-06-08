@@ -1,5 +1,4 @@
 
-
 DAVID_BOMBAL - HOW TCP REALLY WORKS 
 
 https://www.youtube.com/watch?v=rmFX1V49K8U
@@ -21,9 +20,24 @@ Desination Port: 80 (Client is sitting on the source port and the server is on D
 
 As you go down the wireshark list of packets you will see after each conversation the stream index goes up by 1 , so the stream indexhelps identify which conversation the packet is from 
 
-
 SYN- SYN/ACK - ACK
 
 SYN HANDSHAKE EXPLANATION ==
- 
 
+An easy analogy to use when reading the SYN SYN/ACK ACK packets being sent back and forth is to image the data as TWO SEPARATE Streams going back and forth , so it is not to get confused when your reading an TCP Segment sent to client, Then that Same segment sent back to the server as an ACK... This is not two separate data packets, it is the same one being sent back and forth acknowledging each other to confirm that the data was sent and received properly.
+
+TIP: When doing TCP analysis, take a piece of scratch paper, write down "client" and "server" and record each sequence number as you see them to keep track of where you are down the connection line and not get lost or confused... Even tho Wireshark displays the information it is easy to get lost and confused the farther down you go on the packet list, my making physical notes in front of you, you can always reference back to that to find your place in the sequence 
+
+.....
+
+Under Preferences Tab you can add a "Column" under the name "Delta Time" so that wireshark displays the time it takes for the packet to travel from the Server to the Clients machine .... This is important because if the server is in arms reach of the client the delta time should be very short vs if the server is across the world this time will be significantly longer , Delta time is how we see this 
+(By default wireshark only displays the "time" column not the "delta time" so it much be added through preferences)
+
+The Value of the Sequence number does not matter, Focus more on the "relative Sequence number" to get an understanding of where the server and client are in the three way handshake process. 
+Once you see that the sequence number is 1 and the acknowledge number is 1 you know that the Three Way Handshake between both machines is complete.
+
+( It is important to know going forward after the Handshake is complete and the connection is established: that, ONE BYTE IS ONE NUMBER RELATIVELY.... Meaning if 501 bytes are sent in the first GET packet of data, the next relative sequence number will be 502 because it is adding on all the bytes into the sequence ) - ( "TCP Segment Len:" == is the payload length, and that what is going to be added onto the next sequence number) - ( A good thing to do when starting up wireshark is to right click on the "TCP Segment Len:" and choose to "add as a column" so that in the above top panel you can see the TCP Segment Length for every packet that is captured if there is one )
+
+There will always be a completed Three way Handshake (SYN SYN/ACK ACK) in three packets between both machines before data can be send back and forth (You can NOT start with a GET packet before the handshake is complete) 
+
+In the "GET" packet with data - At the Bottom of the "Transmission Control Protocol" tab, you will see a "TCP payload" that shows the number of bytes inside that packet that was sent
