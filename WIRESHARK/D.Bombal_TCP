@@ -41,3 +41,49 @@ Once you see that the sequence number is 1 and the acknowledge number is 1 you k
 There will always be a completed Three way Handshake (SYN SYN/ACK ACK) in three packets between both machines before data can be send back and forth (You can NOT start with a GET packet before the handshake is complete) 
 
 In the "GET" packet with data - At the Bottom of the "Transmission Control Protocol" tab, you will see a "TCP payload" that shows the number of bytes inside that packet that was sent
+
+ 
+ [AFTER-NOTE:] - Why is it so important that we capture the beginning handshake to analyze when reviewing over TCP ?
+ 
+ * Because the original Handshake have important information in it such as the "Header Length" , and "options", both of which are only given once in the beginning when the Handshake is established . 
+
+SYN HANDSHAKE EXPLAINED ==
+
+
+An easy analogy to use when reading the SYN SYN/ACK ACK packets being sent back and forth is to image the data as TWO SEPARATE Streams going back and forth , so it is not to get confused when your reading an TCP Segment sent to client, Then that Same segment sent back to the server as an ACK... This is not two separate data packets, it is the same one being sent back and forth acknowledging each-other to confirm that the data was sent and received properly.
+
+TIP: When doing TCP analysis, take a piece of scratch paper, write down "client" and "server" and record each sequence number as you see them to keep track of where you are down the connection line and not get lost or confused... Even tho Wireshark displays the information it is easy to get lost and confused the farther down you go on the packet list, my making physical notes in front of you, you can always reference back to that to find your place in the sequence 
+
+.....
+
+Under Preferences Tab you can add a "Column" under the name "Delta Time" so that wireshark displays the time it takes for the packet to travel from the Server to the Clients machine .... This is important because if the server is in arms reach of the client the delta time should be very short vs if the server is across the world this time will be significantly longer , Delta time is how we see this 
+(By default wireshark only displays the "time" column not the "delta time" so it much be added through preferences)
+
+The Value of the Sequence number does not matter, Focus more on the "relative Sequence number" to get an understanding of where the server and client are in the three way handshake process. 
+Once you see that the sequence number is 1 and the acknowledge number is 1 you know that the Three Way Handshake between both machines is complete.
+
+( It is important to know going forward after the Handshake is complete and the connection is established: that, ONE BYTE IS ONE NUMBER RELATIVELY.... Meaning if 501 bytes are sent in the first GET packet of data, the next relative sequence number will be 502 because it is adding on all the bytes into the sequence ) - ( "TCP Segment Len:" == is the payload length, and that what is going to be added onto the next sequence number) - ( A good thing to do when starting up wireshark is to right click on the "TCP Segment Len:" and choose to "add as a column" so that in the above top panel you can see the TCP Segment Length for every packet that is captured if there is one )
+
+There will always be a completed Three way Handshake (SYN SYN/ACK ACK) in three packets between both machines before data can be send back and forth (You can NOT start with a GET packet before the handshake is complete) 
+
+In the "GET" packet with data - At the Bottom of the "Transmission Control Protocol" tab, you will see a "TCP payload" that shows the number of bytes inside that packet that was sent
+
+TCP FLAGS == (in the real world, the bottom 5 Flags are most important and practically used: [Acknowledge, Push, Reset, Syn, Fin] )
+
+The Flags tab (under Transmission Control Protocol) helps identify what the packet you are examine is. The first flag in the handshake usually just say that the flag is SYN.
+
+If you want to filter a flag, for instance see how many SYN packets there are in a pcap, right click that flag, and in the bottom bar of the Wireshark application, you will see the acronym used for that flag in the bottom [Syn (tcp.flags.syn), this is almost like a built in filter cheatsheet ]
+
+TCP Window: 
+
+The window size shows the maximum amount or size of data that can be sent back or forth between the client and the server (analogy is sending a swimming pool of water from one person to another, if we can a really skinny hose to send that water, we are limited in the amount we can transfer over at once and it will take a very long time to travel all that water from the server to the client) Options: Window scale came in later to try and fix this issue with TCP.
+
+The client you are communicating with much be able to accept the "window scale" option in order to increase the window size available to send over data back and forth. For example if you are working with a smaller IoT Device such as something like a smart thermometer, that device may not be able to accept the window scale option and it will be restricted to whatever TCP Window was originally set up when the connection was established 
+
+You can see if Window Scaling is an option by looking at both the client and server and seeing if they both offer this as an option, if both the client and the server/device they are communicating with offer window scale as an option, that means window scale multiplying is available to be used 
+
+Without having the original Handshake to compare the Window Scale, more likely than not people will think that the low Window size is the reason for such a slow stream of data back and forth. But they are more likely just missing the original Handshake that gives this bit of information and something else is bottlenecking there stream... (Thats why its so important to capture the original handshake in the pcap file when doing an analysis)
+
+"Calculate Window Size" will show the actual Window size available for sending data. Important to check this... Usually always check the Calculated Window Size to get the True available Window 
+
+Ended on 54:45 ...
