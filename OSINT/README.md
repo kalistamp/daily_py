@@ -1,2 +1,2 @@
 
-### OSINT RESOUCES HERE - -
+### OSINT GITHUBS: - -
