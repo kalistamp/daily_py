@@ -1,3 +1,4 @@
 
 
 * Online #AI tool to increase image resolution (x2, x4, x8) without quality loss. 100% automatic. Very fast : [enhance](http://letsenhance.io)
+* Perfectly simple tool for putting an arrow on a screenshot, highlighting some detail or blurring personal data: [Annotely](https://szoter.com/launch/)
