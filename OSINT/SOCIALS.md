@@ -4,9 +4,9 @@
 
 *  Collections of tools for gathering information on telegram accounts: [Telegram](https://start.me/p/YaOYnJ/telegram-osint)
 
-* Handy way to read Russian channels about OSINT/cybersecurity 
+* Handy way to read Russian channels about OSINT/cybersecurity:
 
-(an alternative to built-in translation in Telegram)
+ ``` (an alternative to built-in translation in Telegram)
 
 
 
@@ -59,7 +59,9 @@ If you want to translate an individual message, you can also use translation bot
 @translationchatbot (translate all messages in chats)
 
 
-(and once again, a reminder about  built-in translation in Telegram)
+(and once again, a reminder about  built-in translation in Telegram) 
+
+```
 
 * * *
 
