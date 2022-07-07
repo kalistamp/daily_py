@@ -65,4 +65,10 @@ If you want to translate an individual message, you can also use translation bot
 
 * * *
 
-### Next :
+### Reddit:
+
+* Refine Reddit Searches with [BetterReddit](https://betterredditsearch.web.app)
+
+* * *
+
+### Nest
