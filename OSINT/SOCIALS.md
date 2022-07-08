@@ -68,7 +68,10 @@ If you want to translate an individual message, you can also use translation bot
 ### Reddit:
 
 * Refine Reddit Searches with [BetterReddit](https://betterredditsearch.web.app)
+* Reveal reddit's removed content. Search by username, subreddit (r/), link or domain: [Reveddit](https://www.reveddit.com/#welcome)
 
 * * *
 
-### Nest
+### Sock:
+
+* A collection of neural network-generated stylegan-2 human faces that have had their hair removed. These can be used to create realistic photos of non-existent people more easily and quickly: [Git_Repo](https://github.com/oneThousand1000/non-hair-FFHQ)
