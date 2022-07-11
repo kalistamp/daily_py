@@ -3,6 +3,7 @@
 ### Telegram :
 
 *  Collections of tools for gathering information on telegram accounts: [Telegram](https://start.me/p/YaOYnJ/telegram-osint)
+*  A search engine to find highly specialised chatbots for all occasions: [BOTS](https://chatbottle.co/bots/telegram)
 
 * Handy way to read Russian channels about OSINT/cybersecurity:
 
