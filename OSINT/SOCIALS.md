@@ -1,6 +1,5 @@
 
 * ALL Social Meedias Tool List: https://github.com/MobileFirstLLC/social-media-hacker-list
-* Fakes Generator for all Socials: [Fake_Info](https://fakeinfo.net/)
 
 * * *
 
@@ -81,3 +80,5 @@ If you want to translate an individual message, you can also use translation bot
 ### Sock:
 
 * A collection of neural network-generated stylegan-2 human faces that have had their hair removed. These can be used to create realistic photos of non-existent people more easily and quickly: [Git_Repo](https://github.com/oneThousand1000/non-hair-FFHQ)
+* This Person does not exist: http://thispersondoesnotexist.com
+* * Fakes Generator for all Socials: [Fake_Info](https://fakeinfo.net/)
