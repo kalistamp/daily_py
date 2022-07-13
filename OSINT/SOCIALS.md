@@ -1,5 +1,6 @@
 
 * ALL Social Meedias Tool List: https://github.com/MobileFirstLLC/social-media-hacker-list
+* Fakes Generator for all Socials: [Fake_Info](https://fakeinfo.net/)
 
 * * *
 
