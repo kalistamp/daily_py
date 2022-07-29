@@ -6,9 +6,12 @@ First let's talk about programming languages. One of the most important language
 
 Here are some projects for beginners:
 
-    Cracking Wifi: Have a look at aircrack-ng (https://github.com/aircrack-ng/aircrack-ng). It's a tool to crack wifi passwords via bruteforce (also have a look at F. (Offline) cracking / bruteforce). Follow this official tutorial to crack WPA / WPA2: https://www.aircrack-ng.org/doku.php?id=cracking_wpa
-    Man in the middle: This attack is kind of ruined, because of encrypted traffic, but it's still useful to know it. Read about it: https://en.wikipedia.org/wiki/Man-in-the-middle_attack.
-    nmap: nmap (https://nmap.org/) is a great network scanning tool and indispensable. You can e.g. scan ports of a server or just list all devices in your current network. But it's still just a scanning tool.
-    Jammer / Fake AP: A jammer is something you can write on your own with just a little knowledge of python. This is a tutorial what it is and how to code one: https://www.shellvoide.com/python/how-to...am-python/ . But just jamming isn't very useful, maybe for fun, but you need a sence. Fluxion (https://github.com/FluxionNetwork/fluxion) is a tool to get the wifi password of wifis with a lot of users. It's a jammer, but after starting it, fluxion creates another wifi with the same name. 
+Cracking Wifi: Have a look at aircrack-ng (https://github.com/aircrack-ng/aircrack-ng). It's a tool to crack wifi passwords via bruteforce (also have a look at F. (Offline) cracking / bruteforce). Follow this official tutorial to crack WPA / WPA2: https://www.aircrack-ng.org/doku.php?id=cracking_wpa
+
+Man in the middle: This attack is kind of ruined, because of encrypted traffic, but it's still useful to know it. Read about it: https://en.wikipedia.org/wiki/Man-in-the-middle_attack.
+
+nmap: nmap (https://nmap.org/) is a great network scanning tool and indispensable. You can e.g. scan ports of a server or just list all devices in your current network. But it's still just a scanning tool.
+
+Jammer / Fake AP: A jammer is something you can write on your own with just a little knowledge of python. This is a tutorial what it is and how to code one: https://www.shellvoide.com/python/how-to...am-python/ . But just jamming isn't very useful, maybe for fun, but you need a sence. Fluxion (https://github.com/FluxionNetwork/fluxion) is a tool to get the wifi password of wifis with a lot of users. It's a jammer, but after starting it, fluxion creates another wifi with the same name. 
     
-    At e.g. a big motel some users will try your fake wifi, because youre jamming the real wifi, and you get the real password 
+At e.g. a big motel some users will try your fake wifi, because youre jamming the real wifi, and you get the real password 
